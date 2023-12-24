@@ -1,7 +1,47 @@
 
 # Blog Platform
 
-##### This project is a blog platform developed using Express.js, a web framework for Node.js. Leveraging EJS as the template engine, the platform enables dynamic content rendering on the server side. The structure includes a "public" directory for static assets, and a "BlogController" class manages routes and blog-related logic. EJS layouts are employed for view rendering, and the application serves a home page ("/") through the homePage method of the BlogController. Notably, the setup incorporates static file middleware, EJS layouts, and specifies the view engine and location. This minimalistic blog platform lays the groundwork for further customization and extension by incorporating additional features and functionalities.
+This project is a blog platform developed using Express.js, a web framework for Node.js. Leveraging EJS as the template engine, the platform enables dynamic content rendering on the server side. The structure includes a "public" directory for static assets, and a "BlogController" class manages routes and blog-related logic. EJS layouts are employed for view rendering, and the application serves a home page ("/") through the homePage method of the BlogController. Notably, the setup incorporates static file middleware, EJS layouts, and specifies the view engine and location. This minimalistic blog platform lays the groundwork for further customization and extension by incorporating additional features and functionalities.
+```
+project-root/
+│
+├── src/
+│ ├── controllers/
+│ │ ├── HomeController.js
+│ │ └── BlogController.js
+│ ├── views/
+│ │ ├── home.ejs
+│ │ ├── blog/
+│ │ │ └── post.ejs
+│ ├── models/
+│ │ ├── User.js
+│ │ └── Post.js
+│ └── app.js
+│
+├── public/
+│ ├── styles/
+│ │ └── main.css
+│ ├── scripts/
+│ │ └── app.js
+│ └── images/
+│ └── logo.png
+│
+├── tests/
+│ ├── unit/
+│ │ └── test_home_controller.js
+│ ├── integration/
+│ │ └── test_blog_controller.js
+│ └── helpers/
+│ └── test_utils.js
+│
+├── config/
+│ ├── database.json
+│ ├── settings.json
+│ └── routes.json
+│
+├── README.md
+├── package.json
+└── .gitignore
 
 ## Installation
 
