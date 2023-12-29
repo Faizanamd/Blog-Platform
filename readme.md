@@ -42,7 +42,7 @@ project-root/
 ├── README.md
 ├── package.json
 └── .gitignore
-
+```
 ## Installation
 
 Install my-project with npm
