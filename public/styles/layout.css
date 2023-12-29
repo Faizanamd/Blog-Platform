@@ -31,56 +31,49 @@ nav {
 .right {
     display: flex;
     align-items: center;
+    justify-content: center;
+    column-gap: 12px;
 }
 
-.list {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+.right button {
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    color: #02A28F;
+    border: none;
+    padding: 6px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: all 0.4s;
 }
 
-.list li {
-    margin-right: 20px;
+.right button:hover {
+    transform: scale(1.09);
+    color: #ffffff;
+    background: #02A28F;
+    border: 1px solid #ffffff;
 }
-
-.list li a {
-    font-size: 1.3rem;
+.right a{
     text-decoration: none;
     color: #ffffff;
+   display: flex;
+   align-items: center;
+}
+.svg-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+    /* color: red; */
+    fill: #02A28F;
+    /* fill: red; */
+    transition: all 0.5s; /* Match the button color or choose a complementary color */
 }
 
-.buttons {
-    margin-right: 2vw;
-    background-color: transparent;
-}
 
-.buttons button {
-    font-size: 1.4rem;
-    padding: 5px 10px;
-    color: #02A28F;
 
-    outline: none;
-    border: 2px solid #02A28F;
-    transition: background-color 1s, color 0.5s;
-
-}
-
-#btn1 {
-    border-right: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-#btn2 {
-    border-left: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-.buttons button:hover {
-    background-color: #CCE5E2;
-    color: #02A28F;
+/* Optional: Add animation to the button */
+.right button {
+    transition: background-color 0.3s ease;
 }
 
 
@@ -94,8 +87,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: static;
-    bottom: 0;
+    /* position: static; */
+    margin-bottom: px;
 }
 
 .links {
@@ -103,6 +96,6 @@ footer {
 }
 
 .links p {
-    margin: 0px 10px;
+    /* margin: 0px 10px; */
     color: white;
 }
