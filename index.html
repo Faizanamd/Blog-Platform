@@ -5,40 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogPlatform</title>
+
     <link rel="stylesheet" href="public/styles/home.style.css">
     <link rel="stylesheet" href="public/styles/layout.css">
-
+    <link rel="stylesheet" href="public/styles/loginModal.css">
+    <script src="public/scripts/Modal.js"></script>
 </head>
 
 <body>
+    <div class="modal" id="newProjectModal">
+        <div class="modal-content">
+            <!-- Close button for the modal -->
+            <span class="close" id="closeModal">&times;</span>
+
+            <!-- Heading for the modal -->
+            <h1 class="modelMainHeading">Login</h1>
+
+            <!-- Form for creating a new project -->
+            <form id="newProjectForm" action="/newProject" method="post">
+                <label for="email">Enter Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter email" required>
+
+                <label for="password">Enter password</label>
+                <input type="password" name="password" id="password" placeholder="Enter password" required>
+
+                <!-- Submit button for the form -->
+                <button type="submit" class="newProjectButton">Submit</button>
+            </form>
+            <div class="bottomOfLogin">
+                <p>Don't have an account: <a>singup</a> </p>
+                <p>Forget Password</p>
+            </div>
+        </div>
+    </div>
+
     <nav>
+        <!-- <div class="main"> -->
         <div class="left">
             <a href="#">FZN Blog Platform</a>
         </div>
 
         <div class="right">
-            <div class="list">
-                <li><a href="#">Brand</a></li>
-                <li><a href="#">Tutorial</a></li>
-                <li><a href="#">Program</a></li>
-                <li><a href="#">Technologies</a></li>
-            </div>
-            <div class="buttons">
-                <button id="btn1" type="submit">SingIn</button><button id="btn2" type="submit">SingUp</button>
-            </div>
+            <button type="submit" id="loginbutton">Login</button>
+            <button>New Blog</button>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                </svg>
+            </a>
         </div>
+        <!-- </div> -->
     </nav>
 
-    <!-- // Main section start here -->
+
+
+
+
     <main>
+
+
+        <!-- // Main section start here -->
         <article>
-            <div class="banner">
+            <a href="/#" class="banner">
                 <div class="details">
                     <div id="labelOfBanner">Travel </div>
                     <div id="headingOfBanner">Exploring the Charm of Paris</div>
                     <div id="writerOfBanner"><strong>By</strong> Jane Smith</div>
                 </div>
-            </div>
+            </a>
             <section class="sectionPost">
                 <div class="sectionHeading">
                     <p class="sectionHedingLogo">Latest Posts</p>
@@ -47,90 +84,205 @@
                 <div class="sectionPostBoxes">
                     <!-- Blog 1: Travel Adventures -->
                     <a href="#" class="postBox">
-                        <img src="/public/images/Paris.jpg" alt="">
+                        <img src="public/images/Paris.jpg" alt="">
                         <div class="postBoxBottom">
                             <div class="labelOfPost">Travel </div>
                             <div class="headingOPost">Exploring the Charm of Paris</div>
-                            <div class="writerOfPost"><strong>By</strong> Jane Smith</div>
                             <div class="postPara">Have you ever dreamed of strolling along the Seine River or marveling
                                 at the Eiffel Tower's glittering lights? Join me on a virtual journey as we uncover the
                                 enchanting beauty of Paris, the City of Love.</div>
-                            <div class="date">22 August 2022</div>
+                            <!-- <div class="date">22 August 2022</div> -->
+                            <div class="writerOfPost"><strong>By</strong> Jane Smith</div>
                         </div>
                     </a>
 
                     <!-- Blog 2: Healthy Living -->
                     <a href="#" class="postBox">
-                        <img src="/public/images/Fruit.jpg" alt="">
+                        <img src="public//images/Fruit.jpg" alt="">
                         <div class="postBoxBottom">
                             <div class="labelOfPost">Health </div>
                             <div class="headingOPost">A Guide to Balanced Nutrition</div>
-                            <div class="writerOfPost"><strong>By</strong> Mark Johnson</div>
                             <div class="postPara">Maintaining a healthy lifestyle begins with proper nutrition. In this
                                 blog post, we'll explore the fundamentals of balanced eating, providing practical tips
                                 to help you make informed choices for a nourished and energized life.</div>
-                            <div class="date">22 August 2022</div>
+                            <div class="writerOfPost"><strong>By</strong> Mark Johnson</div>
+                            <!-- <div class="date">22 August 2022</div> -->
                         </div>
                     </a>
 
                     <!-- Blog 3: Technology Trends -->
                     <a href="#" class="postBox">
-                        <img src="/public/images/Artififcal.jpg" alt="">
+                        <img src="public//images/Artififcal.jpg" alt="">
                         <div class="postBoxBottom">
                             <div class="labelOfPost">Technology </div>
                             <div class="headingOPost">The Rise of Artificial Intelligence</div>
-                            <div class="writerOfPost"><strong>By</strong> Emily Davis</div>
                             <div class="postPara">Artificial Intelligence is reshaping the way we interact with
                                 technology. Join me as we delve into the fascinating world of AI, exploring its
                                 applications, challenges, and the transformative impact it has on various industries.
                             </div>
-                            <div class="date">22 August 2022</div>
+                            <div class="writerOfPost"><strong>By</strong> Emily Davis</div>
+                            <!-- <div class="date">22 August 2022</div> -->
                         </div>
                     </a>
 
                     <!-- Blog 4: Book Reviews -->
                     <a href="#" class="postBox">
-                        <img src="/public/images/novel.jpg" alt="">
+                        <img src="public//images/novel.jpg" alt="">
                         <div class="postBoxBottom">
                             <div class="labelOfPost">Literature </div>
                             <div class="headingOPost">Dive into the World of Mystery Novels</div>
-                            <div class="writerOfPost"><strong>By</strong> Alex Turner</div>
                             <div class="postPara">If you're a fan of suspense and intrigue, mystery novels offer a
                                 captivating escape. In this blog post, I'll share my top picks for gripping mysteries
                                 that will keep you on the edge of your seat until the very last page.</div>
-                            <div class="date">22 August 2022</div>
+                            <!-- <div class="date">22 August 2022</div> -->
+                            <div class="writerOfPost"><strong>By</strong> Alex Turner</div>
                         </div>
                     </a>
 
                     <!-- Blog 5: DIY Home Decor -->
                     <a href="#" class="postBox">
-                        <img src="/public/images/Decor.jpg" alt="">
+                        <img src="public//images/Decor.jpg" alt="">
                         <div class="postBoxBottom">
                             <div class="labelOfPost">Home </div>
                             <div class="headingOPost">Transform Your Space with DIY Decor</div>
-                            <div class="writerOfPost"><strong>By</strong> Jessica Martinez</div>
                             <div class="postPara">Spruce up your living space without breaking the bank! Join me as we
                                 explore simple and creative do-it-yourself home decor ideas that will add a personal
                                 touch to every corner of your home.</div>
-                            <div class="date">22 August 2022</div>
+                            <!-- <div class="date">22 August 2022</div> -->
+                            <div class="writerOfPost"><strong>By</strong> Jessica Martinez</div>
                         </div>
                     </a>
+                    <!-- Blog 6: Outdoor Adventures -->
+                    <a href="#" class="postBox">
+                        <img src="public/images/adventure.jpg" alt="">
+                        <div class="postBoxBottom">
+                            <div class="labelOfPost">Adventure </div>
+                            <div class="headingOPost">Discovering Nature's Wonders</div>
+                            <div class="postPara">Embark on an exhilarating journey through lush forests, towering
+                                mountains, and
+                                breathtaking landscapes. Join me as we explore the beauty of the great outdoors and the
+                                thrill of
+                                outdoor adventures.</div>
+                            <div class="writerOfPost"><strong>By</strong> Michael Anderson</div>
+                        </div>
+                    </a>
+
+                    <!-- Blog 7: Culinary Delights -->
+                    <a href="#" class="postBox">
+                        <img src="public//images/Food.jpg" alt="">
+                        <div class="postBoxBottom">
+                            <div class="labelOfPost">Food </div>
+                            <div class="headingOPost">Savoring Culinary Delights</div>
+                            <div class="postPara">Indulge your taste buds with a culinary journey featuring delectable
+                                dishes from
+                                around the world. In this blog post, we'll explore unique flavors, cooking techniques,
+                                and the joy of
+                                creating delicious meals.</div>
+                            <div class="writerOfPost"><strong>By</strong> Sophia Ramirez</div>
+                        </div>
+                    </a>
+
+                    <!-- Blog 8: Fitness Tips -->
+                    <a href="#" class="postBox">
+                        <img src="public//images/Fitness.jpg" alt="">
+                        <div class="postBoxBottom">
+                            <div class="labelOfPost">Fitness </div>
+                            <div class="headingOPost">Achieving Your Fitness Goals</div>
+                            <div class="postPara">Embark on a fitness journey and discover effective workouts, nutrition
+                                tips, and
+                                motivational strategies to help you achieve your health and wellness goals. Get ready to
+                                transform your
+                                lifestyle!</div>
+                            <div class="writerOfPost"><strong>By</strong> Ryan Mitchell</div>
+                        </div>
+                    </a>
+
+                    <!-- Blog 9: Fashion Trends -->
+                    <a href="#" class="postBox">
+                        <img src="public//images/Fashion.jpg" alt="">
+                        <div class="postBoxBottom">
+                            <div class="labelOfPost">Fashion </div>
+                            <div class="headingOPost">Trending Styles for Every Season</div>
+                            <div class="postPara">Stay ahead of the fashion curve with insights into the latest trends,
+                                styling tips,
+                                and wardrobe essentials. Join me as we explore the world of fashion and express your
+                                unique style
+                                effortlessly.</div>
+                            <div class="writerOfPost"><strong>By</strong> Olivia Taylor</div>
+                        </div>
+                    </a>
+
+                    <!-- Blog 10: Pet Care Tips -->
+                    <a href="#" class="postBox">
+                        <img src="public//images/Pet.jpg" alt="">
+                        <div class="postBoxBottom">
+                            <div class="labelOfPost">Pets </div>
+                            <div class="headingOPost">Caring for Your Furry Friends</div>
+                            <div class="postPara">Discover valuable tips and advice for providing the best care for your
+                                pets. From
+                                nutrition to grooming, we'll cover everything you need to know to ensure the well-being
+                                and happiness of
+                                your furry companions.</div>
+                            <div class="writerOfPost"><strong>By</strong> Emma Johnson</div>
+                        </div>
+                    </a>
+
+                    <!-- Add more post boxes as needed -->
+
+
 
                 </div>
             </section>
         </article>
 
-
         <aside>
-            <div class="asidePopular">
-                Hii
+            <div class="search-form">
+                <input type="text" placeholder="search">
+                <button>Search</button>
             </div>
             <div class="asideCategory">
                 Hii
             </div>
+            <div class="asidePopular">
+
+                <div class="blogTypeFilter">
+                    <button>Health</button>
+                    <button>Technology</button>
+                    <button>Literature</button>
+                    <button>Programming</button>
+                    <button>Gaming</button>
+                    <button>Fitness</button>
+                    <button>Computer</button>
+                    <button>Environmental</button>
+                    <button>Fashion</button>
+                    <button>Food and Cooking</button>
+                    <button>DIY and Crafts</button>
+                    <button>Beauty and Makeup</button>
+                    <button>Education</button>
+                    <button>Wellness</button>
+                    <button>Personal Development</button>
+                    <button>Photography</button>
+                    <button>Parenting</button>
+                    <button>Finance</button>
+                    <button>Social Issues</button>
+                    <button>Music</button>
+                    <button>Home Decor</button>
+                    <button>Book Reviews</button>
+                    <button>Technology</button>
+                    <button>Sports</button>
+                    <button>Career and Professional Development</button>
+                    <button>Travel</button>
+                    <button>Science</button>
+                    <button>Entertainment</button>
+                    <button>Art and Design</button>
+                    <button>Business</button>
+                    <button>History</button>
+                </div>
+
+            </div>
+
         </aside>
     </main>
-
 
     <footer>
         <div>Copyright@faizanamd</div>
@@ -139,8 +291,6 @@
             <a href="https://www.linkedin.com/in/fxan-thues/">LinkedIn</a>
         </div>
     </footer>
-
-    <script src="/public/scripts/lettwrapping.js"></script>
 </body>
 
 </html>

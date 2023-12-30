@@ -69,7 +69,37 @@ nav {
     transition: all 0.5s; /* Match the button color or choose a complementary color */
 }
 
+/* .blogTypeFilter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 
+  .blogTypeFilter button {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .blogTypeFilter button:hover {
+    background-color: #2980b9;
+  } */
+
+  #loadMoreButton {
+    margin-top: 8px;
+    background-color:  #f0f0f0;
+    border: none;
+    color: #02A28F;
+    border-radius: 16px;
+    align-self: center;
+  }
+
+  #loadMoreButton:hover {
+    background-color: #dcdcdc; /* Change to a slightly darker color on hover */
+  }
 
 /* Optional: Add animation to the button */
 .right button {

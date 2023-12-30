@@ -20,6 +20,6 @@ app.set("views", path.join(path.resolve(), 'src', 'views'))
 
 // routes for home page
 app.get('/',blogController.homePage)
-
+app.get('/register', blogController.register);
 
 export default app;

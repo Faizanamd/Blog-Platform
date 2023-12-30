@@ -1,0 +1,70 @@
+<div class="formContainer">
+  <form class="signUpForm" action="/signup" method="post">
+      <div class="inputGroup firstName">
+          <label for="fistName">First Name:</label>
+          <input type="text" id="fistName" name="fistName" placeholder="Enter first name" required>
+      </div>
+
+      <div class="inputGroup middleName">
+          <label for="middleName">Middle Name:</label>
+          <input type="text" id="middleName" name="middleName" placeholder="Enter middle name" >
+      </div>
+
+      <div class="inputGroup lastName">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Enter last name" >
+      </div>
+      <div class="inputGroup phoneNumber">
+          <div class="codeNumberGroup">
+              <label for="countryCode">Country Code:</label>
+              <select id="countryCode" name="countryCode">
+                  <option value="+91">+91 (IND)</option>
+                  <option value="+1">+1 (US)</option>
+                  <option value="+44">+44 (UK)</option>
+              </select>
+          </div>
+          <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter phone number" required>
+      </div>
+      <div class="inputGroup email">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter email" required>
+      </div>
+      <div class="inputGroup profilePicture">
+          <label for="profilePicture">Profile Picture:</label>
+          <input type="file" id="profilePicture" name="profilePicture">
+      </div>
+      <div class="inputGroup password">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Enter password" required>
+      </div>
+      <div class="inputGroup cpassword">
+          <label for="cpassword">Password:</label>
+          <input type="password" id="cpassword" name="cpassword" placeholder="confirm password" required>
+      </div>
+
+
+
+      <div class="inputGroup bio">
+          <label for="bio">Bio/About Me:</label>
+          <textarea id="bio" name="bio" rows="4"></textarea>
+      </div>
+
+      <div class="inputGroup website">
+          <label for="website">Website URL:</label>
+          <input type="url" id="website" name="website">
+      </div>
+
+      <div class="inputGroup interests">
+          <label for="interests">Interests/Tags:</label>
+          <input type="text" id="interests" name="interests">
+      </div>
+
+      <div class=" terms">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">I agree to the Terms of Service and Privacy Policy</label>
+      </div>
+      <button type="submit">Sign Up</button>
+  </form>
+      
+
+</div>
