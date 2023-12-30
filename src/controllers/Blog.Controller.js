@@ -18,4 +18,16 @@ export default class BlogController{
         }
        
     }
+    async singin(req, res){
+        try{
+            console.log(req.body);
+            await userRepository.signin(req.body);
+            console.log("usr logged in")
+            req.session.userEmail = req.body.email;
+            res.render('home');
+        }catch(err){
+            console.log(err);
+            res.redirect('/')
+        }
+    }
 }

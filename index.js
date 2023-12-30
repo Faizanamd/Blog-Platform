@@ -27,5 +27,6 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/',blogController.homePage)
 app.get('/register', blogController.register);
 app.post('/signup',uploadFile.single('profilePicture'), blogController.signup);
+app.post('/signin', blogController.singin);
 
 export default app;
