@@ -1,5 +1,6 @@
 import app from './index.js';
-
-app.listen(8000, ()=>{
+import { connectToMongoose  } from './src/config/connectToMongo.js';
+app.listen(3000, ()=>{
+    connectToMongoose();
     console.log("Sever is listening at port 8000")
 })
