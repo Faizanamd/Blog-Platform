@@ -2,12 +2,19 @@ import express from "express";
 import ejsLayout from 'express-ejs-layouts';
 import path from "path";
 import { uploadFile } from "./src/middleware/fileupload.middleware.js";
-
+import session from "express-session";
 // Creating app using Express
 const app = express();
 // setting up public to use storage and manipulate data
 app.use(express.static('public'));
 
+//setting up session
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true }
+  }))
 
 // Creating instance of BlogController for default page
 import BlogController from "./src/controllers/Blog.Controller.js";

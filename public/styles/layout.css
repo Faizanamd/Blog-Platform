@@ -106,7 +106,11 @@ nav {
     transition: background-color 0.3s ease;
 }
 
-
+.userProfileImage{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
 
 
 /* footer section start here */
