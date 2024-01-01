@@ -53,12 +53,14 @@ nav {
     background: #02A28F;
     border: 1px solid #ffffff;
 }
-.right a{
+
+.right a {
     text-decoration: none;
     color: #ffffff;
-   display: flex;
-   align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .svg-icon {
     width: 32px;
     height: 32px;
@@ -66,7 +68,8 @@ nav {
     /* color: red; */
     fill: #02A28F;
     /* fill: red; */
-    transition: all 0.5s; /* Match the button color or choose a complementary color */
+    transition: all 0.5s;
+    /* Match the button color or choose a complementary color */
 }
 
 /* .blogTypeFilter {
@@ -88,25 +91,26 @@ nav {
     background-color: #2980b9;
   } */
 
-  #loadMoreButton {
+#loadMoreButton {
     margin-top: 8px;
-    background-color:  #f0f0f0;
+    background-color: #f0f0f0;
     border: none;
     color: #02A28F;
     border-radius: 16px;
     align-self: center;
-  }
+}
 
-  #loadMoreButton:hover {
-    background-color: #dcdcdc; /* Change to a slightly darker color on hover */
-  }
+#loadMoreButton:hover {
+    background-color: #dcdcdc;
+    /* Change to a slightly darker color on hover */
+}
 
 /* Optional: Add animation to the button */
 .right button {
     transition: background-color 0.3s ease;
 }
 
-.userProfileImage{
+.userProfileImage {
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -132,4 +136,54 @@ footer {
 .links p {
     /* margin: 0px 10px; */
     color: white;
+}
+
+
+/* warning message design */
+.warning-message {
+    background-color: #99CBC5;
+    /* Red color */
+    color: #01473E;
+    /* White text */
+    width: 400px;
+    height: 30px;
+    padding: 15px;
+
+    margin-top: 6px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(49, 49, 49, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* display: none; */
+}
+
+/* Show Error Message Animation */
+.warning-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Close Button Styles */
+.warning-message #close-button {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 55%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+/* Hover Effect for Close Button */
+.warning-message #close-button:hover {
+    color: #ccc;
 }

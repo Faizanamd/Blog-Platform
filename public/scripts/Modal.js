@@ -60,3 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load more on button click
     loadMoreButton.addEventListener("click", loadMoreButtons);
 });
+document.addEventListener('DOMContentLoaded', function () {
+    var warningMessage = document.getElementById('warningMessage');
+    var closeButton = document.getElementById('close-button');
+    closeButton.addEventListener('click' ,() =>{
+        warningMessage.style.display = 'none'
+    })
+});

@@ -1,45 +1,56 @@
 import UserModel from '../models/user.schema.js'
-export default class UserRepository{
-    async singup(user){
-        try{
+export default class UserRepository {
+    async findByEmailId(email) {
+        try {
+            const user = await UserModel.findOne({ email: email })
+            console.log("User", user);
+            if (user) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (err) {
+            console.log(err);
+            throw new Error(err);
+        }
+    }
+    async singup(user) {
+        try {
             const newuser = new UserModel(user);
             await newuser.save();
             return newuser;
-        }catch(err){
+        } catch (err) {
             console.log(err);
             throw new Error(err);
         }
     }
-    async signin(user){
-        try{
-            //checking if email exist or not
-            const validUser = this.findByEmailId(user.email);
-            if(validUser){
-                // now checking passowrd as per email
-                const result = UserModel.findOne({
+    async signin(user) {
+        try {
+            // Checking if email exists
+            const validUser = await this.findByEmailId(user.email);
+            console.log("valid user", validUser);
+            if (validUser) {
+                // Now checking password for the found email
+                const result = await UserModel.findOne({
                     email: user.email,
                     password: user.password
-                })
-                  return result;
-            }else{
-                return "email does not exist";
+                });
+
+                if (result) {
+                    // Email and password match
+                    return result;
+                } else {
+                    // Password does not match
+                    return "PasswordNotMatched";
+                }
+            } else {
+                // Email does not exist
+                return "EmailNotFound";
             }
-        }catch(err){
+        } catch (err) {
             console.log(err);
             throw new Error(err);
         }
     }
-    async findByEmailId(email){
-        try{
-            const user = UserModel.findOne({email:email})
-            if(user){
-                return true;
-            }else{
-                return false;
-            }
-        }catch(err){
-            console.log(err);
-            throw new Error(err);
-        }
-    }
+
 }
