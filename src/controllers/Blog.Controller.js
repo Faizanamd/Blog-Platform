@@ -12,14 +12,18 @@ export default class BlogController {
         try {
             console.log(req.body);
             const user = req.body;
-            const url = 'documents/' + req.file.filename;
-            user.profilePicture = url;
+            if (req.file && req.file.filename) {
+                const url = 'documents/' + req.file.filename;
+                user.profilePicture = url;
+            }else{
+                user.profilePicture = null;
+            }
             // console.log("url isl ", req.file.filename);
             // console.log("user ", user);
-            await userRepository.singup(req.body);
+            await userRepository.signup(req.body);
             res.render('home', { user: null, userEmail: null, warning: "Your account has been successfully created!" });
         } catch (err) {
-            res.redirect('/');
+            res.render('home', { user: null, userEmail: null, warning: "something went wrong! Please try again" });
         }
     }
     async singin(req, res) {
@@ -28,9 +32,9 @@ export default class BlogController {
             const user = await userRepository.signin(req.body);
             console.log(user);
             if (user === "EmailNotFound") {
-                res.render('home', { user, userEmail: req.session.userEmail, warning: "Email Not Found" });
+                res.render('home', { user: null, userEmail: req.session.userEmail, warning: "Email Not Found" });
             } else if (user === "PasswordNotMatched") {
-                res.render('home', { user, userEmail: req.session.userEmail, warning: "Password Not Matched" });
+                res.render('home', { user: null, userEmail: req.session.userEmail, warning: "Password Not Matched" });
             } else {
                 // Email and password match
                 console.log("User logged in");
@@ -39,6 +43,22 @@ export default class BlogController {
             }
         } catch (err) {
             console.log(err);
+            res.redirect('/');
+        }
+    }
+    async logoutCont(req, res) {
+        try {
+            // Clear the session data (assuming you're using Express session middleware)
+            req.session.destroy((err) => {
+                if (err) {
+                    console.error("Error destroying session:", err);
+                } else {
+                    // Redirect the user to the home page or any other desired page after logout
+                    res.redirect('/');
+                }
+            });
+        } catch (err) {
+            console.error("Error during logout:", err);
             res.redirect('/');
         }
     }

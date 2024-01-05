@@ -35,5 +35,6 @@ app.get('/',blogController.homePage)
 app.get('/register', blogController.register);
 app.post('/signup',uploadFile.single('profilePicture'), blogController.signup);
 app.post('/signin', blogController.singin);
+app.get('/logout', blogController.logoutCont)
 
 export default app;

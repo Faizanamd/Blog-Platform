@@ -14,13 +14,14 @@ export default class UserRepository {
             throw new Error(err);
         }
     }
-    async singup(user) {
+    async signup(user) {
         try {
+            console.log("user in sinpu", user);
             const newuser = new UserModel(user);
             await newuser.save();
             return newuser;
         } catch (err) {
-            console.log(err);
+            console.log("why this erro happened");
             throw new Error(err);
         }
     }

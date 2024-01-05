@@ -46,10 +46,30 @@ nav {
     margin-right: 10px;
     transition: all 0.4s;
 }
+.logoutButton{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Mukta', sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    color: #02A28F !important;
+    border: none;
+    padding: 3px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: all 0.4s;
+    font-weight: bolder !important;
+}
 
-.right button:hover {
+ .right button:hover {
     transform: scale(1.09);
     color: #ffffff;
+    background: #02A28F;
+    border: 1px solid #ffffff;
+}
+.logoutButton:hover{
+    transform: scale(1.09);
+    color: #ffffff !important;
     background: #02A28F;
     border: 1px solid #ffffff;
 }
@@ -144,6 +164,7 @@ footer {
     background-color: #99CBC5;
     /* Red color */
     color: #01473E;
+    font-size: large;
     /* White text */
     width: 400px;
     height: 30px;
