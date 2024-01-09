@@ -1,7 +1,7 @@
 
 # Blog Platform
 
-This project is a (blog platform)[https://fzn-blog-platform.onrender.com/] developed using Express.js, a web framework for Node.js. Leveraging EJS as the template engine, the platform enables dynamic content rendering on the server side. The structure includes a "public" directory for static assets, and a "BlogController" class manages routes and blog-related logic. EJS layouts are employed for view rendering, and the application serves a home page ("/") through the homePage method of the BlogController. Notably, the setup incorporates static file middleware, EJS layouts, and specifies the view engine and location. This minimalistic blog platform lays the groundwork for further customization and extension by incorporating additional features and functionalities.
+This project is a [blog platform](https://fzn-blog-platform.onrender.com/) developed using Express.js, a web framework for Node.js. Leveraging EJS as the template engine, the platform enables dynamic content rendering on the server side. The structure includes a "public" directory for static assets, and a "BlogController" class manages routes and blog-related logic. EJS layouts are employed for view rendering, and the application serves a home page ("/") through the homePage method of the BlogController. Notably, the setup incorporates static file middleware, EJS layouts, and specifies the view engine and location. This minimalistic blog platform lays the groundwork for further customization and extension by incorporating additional features and functionalities.
 ```
 project-root/
 │
